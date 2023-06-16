@@ -26,11 +26,11 @@ public class rotat_e : MonoBehaviour
                 case TouchPhase.Moved:
                     if (startingPosition > touch.position.x)
                     {
-                        transform.Rotate(Vector3.back, rotatespeed * Time.deltaTime);
+                        transform.Rotate(Vector3.up, rotatespeed * Time.deltaTime);
                     }
                     else if (startingPosition < touch.position.x)
                     {
-                        transform.Rotate(Vector3.back, rotatespeed * Time.deltaTime);
+                        transform.Rotate(Vector3.up, rotatespeed * Time.deltaTime);
                     }
                     break;
                 case TouchPhase.Ended:

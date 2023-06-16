@@ -2078,6 +2078,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6538776326965399349, guid: 3dd8657aa15de2f4b80df148c3189f60, type: 3}
+      propertyPath: rotatespeed
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 7063688122216153432, guid: 3dd8657aa15de2f4b80df148c3189f60, type: 3}
       propertyPath: m_Name
       value: Mushroom
