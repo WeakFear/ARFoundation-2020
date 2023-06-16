@@ -41,12 +41,12 @@ public class CameraZoom : MonoBehaviour
             //}
             camtextsize = cameratextchure.transform.localScale.x + (deltaMagnitudeDiff * orthospd);
             cameratextchure.transform.localScale = new Vector2(camtextsize,camtextsize);
+            camtextsize = Mathf.Clamp(camtextsize,1f, 5f);
 
 
 
 
 
-            
         }
     }
 }
