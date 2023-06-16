@@ -6,6 +6,7 @@ public class CameraZoom : MonoBehaviour
 {
     public float orthospd = 0.50f;
     public float camtextsize;
+
     [SerializeField]
     private GameObject cameratextchure;
 
@@ -39,7 +40,7 @@ public class CameraZoom : MonoBehaviour
             //    camera.orthographicSize = Mathf.Max(camera.orthographicSize, 0.1f);
             //}
 
-            camtextsize = cameratextchure.transform.localScale.x + (deltaMagnitudeDiff * orthospd);
+            camtextsize = cameratextchure.transform.localScale.x - (deltaMagnitudeDiff * orthospd);
             camtextsize = Mathf.Clamp(camtextsize, 1f, 2f);
             cameratextchure.transform.localScale = new Vector2(camtextsize,camtextsize);
             
