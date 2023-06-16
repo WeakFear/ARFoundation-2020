@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraZoom : MonoBehaviour
 {
-    public float orthospd = 0.50f;
+    public float Scale = 0.50f;
     public float camtextsize;
 
     [SerializeField]
@@ -16,31 +16,22 @@ public class CameraZoom : MonoBehaviour
         if (Input.touchCount == 2)
         {
             // Store both touches.
-            Touch touchZero = Input.GetTouch(0);
-            Touch touchOne = Input.GetTouch(1);
+            Touch Inital = Input.GetTouch(0);
+            Touch Final = Input.GetTouch(1);
 
             // Find the position in the previous frame of each touch.
-            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+            Vector2 InitalPrevPos = Inital.position - Inital.deltaPosition;
+            Vector2 FinalPrevPos = Final.position - Final.deltaPosition;
 
             // Find the magnitude of the vector (the distance) between the touches in each frame.
-            float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-            float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
+            float InitialTouch = (InitalPrevPos - FinalPrevPos).magnitude;
+            float FinalTouch = (Inital.position - Final.position).magnitude;
 
             // Find the difference in the distances between each frame.
-            float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
+            float TouchDifference = InitialTouch - FinalTouch;
 
-            // If the camera is orthographic...
-            //if (camera.isOrthoGraphic)
-            //{
-            //    // ... change the orthographic size based on the change in distance between the touches.
-            //    camera.orthographicSize += deltaMagnitudeDiff * orthoZoomSpeed;
 
-            //    // Make sure the orthographic size never drops below zero.
-            //    camera.orthographicSize = Mathf.Max(camera.orthographicSize, 0.1f);
-            //}
-
-            camtextsize = cameratextchure.transform.localScale.x - (deltaMagnitudeDiff * orthospd);
+            camtextsize = cameratextchure.transform.localScale.x - (TouchDifference * Scale);
             camtextsize = Mathf.Clamp(camtextsize, 1f, 2f);
             cameratextchure.transform.localScale = new Vector2(camtextsize,camtextsize);
             

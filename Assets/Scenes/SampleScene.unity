@@ -1040,7 +1040,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 765983625}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1259243146}
+        m_TargetAssemblyTypeName: PlaceObjectOnPlane, Assembly-CSharp
+        m_MethodName: beigeMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &765983625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1161,7 +1173,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 864593163}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1259243146}
+        m_TargetAssemblyTypeName: PlaceObjectOnPlane, Assembly-CSharp
+        m_MethodName: monochromeMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &864593163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,7 +1943,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1686119423}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1259243146}
+        m_TargetAssemblyTypeName: PlaceObjectOnPlane, Assembly-CSharp
+        m_MethodName: glitchMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1686119423
 MonoBehaviour:
   m_ObjectHideFlags: 0

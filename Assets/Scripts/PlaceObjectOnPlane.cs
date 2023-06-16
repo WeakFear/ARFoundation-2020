@@ -35,17 +35,17 @@ public class PlaceObjectOnPlane : MonoBehaviour
 
     public void beigeMaterial()
     {
-        spawnedObject.transform.GetChild(0).GetComponent<MeshRenderer>().material = beige;
+        spawnedObject.transform.GetChild(9).GetComponent<MeshRenderer>().material = beige;
     }
 
     public void monochromeMaterial()
     {
-        spawnedObject.transform.GetChild(0).GetComponent<MeshRenderer>().material = monochrome;
+        spawnedObject.transform.GetChild(9).GetComponent<MeshRenderer>().material = monochrome;
     }
 
     public void glitchMaterial()
     {
-        spawnedObject.transform.GetChild(0).GetComponent<MeshRenderer>().material = glitch;
+        spawnedObject.transform.GetChild(9).GetComponent<MeshRenderer>().material = glitch;
     }
 
     public void OnPlaceObject(InputValue value)
