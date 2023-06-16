@@ -12,11 +12,40 @@ public class PlaceObjectOnPlane : MonoBehaviour
     [SerializeField] private GameObject prefab;
     private GameObject spawnedObject;
 
+    //3 object Materials
+
+    [SerializeField]
+    private Material beige;
+
+    [SerializeField]
+    private Material monochrome;
+
+    [SerializeField]
+    private Material glitch;
+
     private ARRaycastManager raycaster;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
     private void Start()
     {
         raycaster = GetComponent<ARRaycastManager>();
+    }
+
+
+    //3 buttons for object materials
+
+    public void beigeMaterial()
+    {
+        spawnedObject.transform.GetChild(0).GetComponent<MeshRenderer>().material = beige;
+    }
+
+    public void monochromeMaterial()
+    {
+        spawnedObject.transform.GetChild(0).GetComponent<MeshRenderer>().material = monochrome;
+    }
+
+    public void glitchMaterial()
+    {
+        spawnedObject.transform.GetChild(0).GetComponent<MeshRenderer>().material = glitch;
     }
 
     public void OnPlaceObject(InputValue value)
@@ -42,3 +71,4 @@ public class PlaceObjectOnPlane : MonoBehaviour
         } 
     }
 }
+

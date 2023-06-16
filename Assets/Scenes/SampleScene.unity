@@ -1604,6 +1604,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 7063688122216153432, guid: 3dd8657aa15de2f4b80df148c3189f60, type: 3}
+  beige: {fileID: 2100000, guid: e4ba1e7bb8e29fd4f80eead9b9b67c45, type: 2}
+  monochrome: {fileID: 2100000, guid: 7ad3f8c38508dc54eaf252bf339a42ab, type: 2}
+  glitch: {fileID: 2100000, guid: 3f71c6623f54582469842942fb461e5f, type: 2}
 --- !u!114 &1259243147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1650,7 +1653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58bafefedb34db42bfbaba16d1a21a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomspeed: 0.5
   orthospd: 0.5
   camtextsize: 0
   cameratextchure: {fileID: 1419610073}
