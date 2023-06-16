@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraZoom : MonoBehaviour
 {
-    public float zoomspeed = 0.50f;
     public float orthospd = 0.50f;
     public float camtextsize;
     [SerializeField]
@@ -39,10 +38,12 @@ public class CameraZoom : MonoBehaviour
             //    // Make sure the orthographic size never drops below zero.
             //    camera.orthographicSize = Mathf.Max(camera.orthographicSize, 0.1f);
             //}
-            camtextsize = cameratextchure.transform.localScale.x + (deltaMagnitudeDiff * orthospd);
-            cameratextchure.transform.localScale = new Vector2(camtextsize,camtextsize);
-            camtextsize = Mathf.Clamp(camtextsize,1f, 5f);
 
+            camtextsize = cameratextchure.transform.localScale.x + (deltaMagnitudeDiff * orthospd);
+            camtextsize = Mathf.Clamp(camtextsize, 1f, 2f);
+            cameratextchure.transform.localScale = new Vector2(camtextsize,camtextsize);
+            
+            
 
 
 
